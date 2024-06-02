@@ -3,7 +3,7 @@ function gcdOfStrings(str1: string, str2: string): string {
 
    const gcd = (a, b) => {
     return b === 0 ? a : gcd(b, a % b);
-   }
+   };
 
    const gcdLength = gcd(str1.length, str2.length); 
 
