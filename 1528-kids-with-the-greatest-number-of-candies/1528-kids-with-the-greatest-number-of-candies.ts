@@ -1,5 +1,5 @@
 const findMaxCandies = (candies: number[]) => {
-    let maxCandy:number = candies[0]
+    let maxCandy = candies[0]
     candies.forEach(candy => maxCandy < candy ? maxCandy = candy : null)
     return maxCandy;
 }
