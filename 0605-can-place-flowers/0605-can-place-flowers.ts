@@ -1,25 +1,15 @@
 function canPlaceFlowers(flowerbed: number[], n: number): boolean {
     if(n === 0) return true;
-    
-    let result = false;
-    const plotGroups = [];
-    let groupIndex = 0;
 
-    flowerbed.forEach((plot, index) => {
-        const prevPlot = index === 0 ? 0 : flowerbed[index - 1];
-        const nextPlot = index === flowerbed.length - 1 ? 0 : flowerbed[index + 1]; 
-        const currPlotGroup = plotGroups[groupIndex] ?? [];
+    for(let i=0; i<flowerbed.length; i++){
+        const prevPlot = flowerbed[i - 1] ?? 0;
+        const nextPlot = flowerbed[i + 1] ?? 0;
 
-        if(prevPlot === 0 && plot === 0 && nextPlot === 0){
-            plotGroups[groupIndex] = [...currPlotGroup, 0];
-        } else {
-            plotGroups[groupIndex] ? groupIndex += 1 : null;
+        if(prevPlot === 0 && flowerbed[i] === 0 && nextPlot === 0){
+            n -= 1;
+            if(n <= 0) return true;
+            flowerbed[i] = 1;
         }
-    });
-
-    for(const plotGroup of plotGroups){        
-        n = n - Math.ceil(plotGroup.length / 2);
-        if(n <= 0) return true;
     }
-    return result;
+    return false;
 };
