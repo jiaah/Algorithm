@@ -4,28 +4,26 @@ const findVowel = (char: string): string | null => vowels.includes(char.toLowerC
 function reverseVowels(str: string): string {
     const arr = str.split('');
 
-    let startIndex: number = 0;
-    let endIndex:number = str.length -1;
+    let leftIndex: number = 0;
+    let rightIndex:number = str.length -1;
 
-    while(startIndex <= endIndex){
-        const startVowel = findVowel(arr[startIndex]);
-        const endVowel = findVowel(arr[endIndex]);
+    while(leftIndex <= rightIndex){
+        const leftVowel = findVowel(arr[leftIndex]);
+        const rightVowel = findVowel(arr[rightIndex]);
 
-        if(startVowel && endVowel){
-            arr[startIndex] = endVowel;
-            arr[endIndex] = startVowel;
-            startIndex++;
-            endIndex--;
+        if(leftVowel && rightVowel){
+            arr[leftIndex] = rightVowel;
+            arr[rightIndex] = leftVowel;
+            leftIndex++;
+            rightIndex--;
         } else {
-            if(!startVowel){
-                startIndex++
+            if(!leftVowel){
+                leftIndex++
             };
-            if(!endVowel){
-                endIndex--
+            if(!rightVowel){
+                rightIndex--
             };
         }
-       
-
     }
     return arr.join('');
 };
