@@ -1,4 +1,3 @@
 function reverseWords(s: string): string {
-    const arr = s.trim().split(/\s+/);
-    return arr.reverse().join(' ');
+    return s.trim().replace(/\s+/g, ' ').split(' ').reverse().join(' ');
 };
