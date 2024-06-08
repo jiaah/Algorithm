@@ -1,4 +1,4 @@
-const regex = /[aeiouAEIOU]/;;
+const regex = /[aeiou]/i;
 const findVowel = (char: string): string | null => regex.test(char) ? char : null;
 
 function reverseVowels(str: string): string {
