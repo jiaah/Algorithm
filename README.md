@@ -22,9 +22,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 # Array
 |  |
 | ------- |
+| [0238-product-of-array-except-self](https://github.com/jiaah/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [0605-can-place-flowers](https://github.com/jiaah/Algorithm/tree/master/0605-can-place-flowers) |
 | [1528-kids-with-the-greatest-number-of-candies](https://github.com/jiaah/Algorithm/tree/master/1528-kids-with-the-greatest-number-of-candies) |
 # Greedy
 |  |
 | ------- |
 | [0605-can-place-flowers](https://github.com/jiaah/Algorithm/tree/master/0605-can-place-flowers) |
+# Prefix Sum
+|  |
+| ------- |
+| [0238-product-of-array-except-self](https://github.com/jiaah/Algorithm/tree/master/0238-product-of-array-except-self) |
