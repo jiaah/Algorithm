@@ -3,15 +3,11 @@ function increasingTriplet(nums: number[]): boolean {
     let secSmallest = Infinity;
 
     for(const num of nums){
-        if(num < smallest && num < secSmallest){
+        if(num <= smallest){
             smallest = num;
-            continue;
-        };
-        if(num > smallest && num < secSmallest){
+        } else if(num <= secSmallest){
             secSmallest = num;
-            continue;
-        };
-        if(num > smallest && num > secSmallest){
+        } else {
             return true;
         }
     }
