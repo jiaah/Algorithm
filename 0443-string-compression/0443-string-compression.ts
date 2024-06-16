@@ -1,30 +1,30 @@
-function compress(chars: string[]) {
-    let startIndex = 0
+function compress(chars: string[]): number {
+    let i=0, ansIndex=0, endIndex=chars.length-1;
 
-    while(startIndex < chars.length){
-       
-        const currChar = chars[startIndex];
-        let count = 1;
+    while(i <= endIndex){
+        let j = i + 1;
 
-        for(let j = startIndex+1; j < chars.length; j++){
-            if(chars[j] === currChar){
-                count++;
-                chars.splice(j, 1);
-                j--;
-            } else {
-                break;
+        while(j <= endIndex && chars[i] === chars[j]){
+            j++
+        };
+
+        const count = j - i;
+        chars[ansIndex] = chars[i];
+        ansIndex++;
+
+        if(count > 1){
+            const countStr = count.toString();
+
+            for(const char of countStr){
+                console.log(char);
+                chars[ansIndex] = char;
+                ansIndex++;
             }
         };
 
-        if(count > 1){
-            const countArray = count >= 10? count.toString().split('') : [count.toString()];
-            chars.splice(startIndex+1, 0, ...countArray);
+        i = j;
+    }
 
-            startIndex += 1 + countArray.length;
-        } else {
-            startIndex++;
-        };
-    };
-    
+    return ansIndex;
 };
 
