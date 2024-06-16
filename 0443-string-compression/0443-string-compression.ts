@@ -16,7 +16,6 @@ function compress(chars: string[]): number {
             const countStr = count.toString();
 
             for(const char of countStr){
-                console.log(char);
                 chars[ansIndex] = char;
                 ansIndex++;
             }
