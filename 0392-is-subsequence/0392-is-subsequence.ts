@@ -7,6 +7,6 @@ function isSubsequence(s: string, t: string): boolean {
         if(arr[0] === t[j]) {
             arr.shift();
         }
-    }
-    return !arr.length
+    };
+    return !arr.length;
 };
