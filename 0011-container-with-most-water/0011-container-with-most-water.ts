@@ -9,11 +9,9 @@ function maxArea(height: number[]): number {
         let amount = 0;
 
         if(leftY < rightY) {
-            console.log('left', r - l, leftY)
             amount = (r - l) * leftY;
             l++;
         } else {
-            console.log('right', r - l, rightY)
             amount = (r - l) * rightY;
             r--
         };
