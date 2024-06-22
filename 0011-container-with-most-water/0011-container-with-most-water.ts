@@ -22,21 +22,6 @@ function maxArea(height: number[]): number {
             result = amount;
         }
     };
-
-    
-
-    // for(let i=0; i<height.length; i++){
-    //     if(height[i] === 0) continue;
-
-    //     for(let j=i+1; j<height.length; j++){
-    //         const x = j - i;
-    //         const y = Math.min(height[i], height[j])
-    //         const amount = x * y;
-    //         if(result >= amount) continue;        
-    //         result = amount;
-            
-    //     };
-    // };
     
     return result;
 };
