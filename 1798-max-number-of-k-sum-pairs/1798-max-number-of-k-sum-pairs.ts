@@ -9,8 +9,10 @@ function maxOperations(nums: number[], k: number): number {
         const rightNum = nums[r];
 
         if(leftNum + rightNum > k){
+            // reduce a large num 
             r--;
         } else if(leftNum + rightNum < k){
+            // increase a small num
             l++;
         } else {
             l++;
