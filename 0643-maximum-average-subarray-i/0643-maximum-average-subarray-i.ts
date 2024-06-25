@@ -1,4 +1,10 @@
 
+/*
+ * Sliding Window Approach
+ *
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
 function findMaxAverage(nums: number[], k: number): number {
     let curSum = 0;
 
