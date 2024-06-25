@@ -1,6 +1,11 @@
 
 function findMaxAverage(nums: number[], k: number): number {
-    let curSum = nums.slice(0, k).reduce((prev,cur) => prev + cur, 0);
+    let curSum = 0;
+
+    for(let j = 0; j < k; j++){
+        curSum += nums[j]
+    };
+
     let maxSum = curSum;
     
     for(let i = k; i < nums.length; i++){
