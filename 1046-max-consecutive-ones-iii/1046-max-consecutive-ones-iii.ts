@@ -14,7 +14,9 @@ function longestOnes(nums: number[], k: number): number {
             }
             start++;
         }
+
+        maximum = Math.max(end - start, maximum);
     }
 
-    return end - start;
+    return maximum;
 };
