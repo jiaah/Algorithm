@@ -70,6 +70,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 |  |
 | ------- |
+| [0724-find-pivot-index](https://github.com/jiaah/Algorithm/tree/master/0724-find-pivot-index) |
 | [1046-max-consecutive-ones-iii](https://github.com/jiaah/Algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/jiaah/Algorithm/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [1833-find-the-highest-altitude](https://github.com/jiaah/Algorithm/tree/master/1833-find-the-highest-altitude) |
@@ -85,6 +86,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Prefix Sum
 |  |
 | ------- |
+| [0724-find-pivot-index](https://github.com/jiaah/Algorithm/tree/master/0724-find-pivot-index) |
 | [1046-max-consecutive-ones-iii](https://github.com/jiaah/Algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1833-find-the-highest-altitude](https://github.com/jiaah/Algorithm/tree/master/1833-find-the-highest-altitude) |
 ## Dynamic Programming
