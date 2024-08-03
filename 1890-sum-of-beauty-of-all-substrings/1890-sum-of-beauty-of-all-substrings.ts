@@ -2,14 +2,14 @@ function beautySum(s: string): number {
     let totalBeauty = 0;
     const n = s.length;
 
-    function beauty(frequencyMap: number[]): number {
-        let maxFreq = 0, 
-            minFreq = n;
+    function calculateBeauty(frequencyMap: number[]): number {
+        let maxFreq = 0, minFreq = Infinity;
 
-        for(let num of frequencyMap){
-            if(!num) continue;
-            maxFreq = Math.max(maxFreq, num);
-            minFreq = Math.min(minFreq, num);
+        for(let count of frequencyMap){
+            if(count > 0) {
+                maxFreq = Math.max(maxFreq, count);
+                minFreq = Math.min(minFreq, count);
+            }
         }
         return maxFreq - minFreq;
     }
@@ -20,10 +20,8 @@ function beautySum(s: string): number {
         for(let j = i; j < n; j++){  // ending point for substring starting at i
             const charIdx = s.charCodeAt(j) - 'a'.charCodeAt(0); //  to map characters 'a' through 'z' to indices 0 through 25 in an array
             freq[charIdx]++
-
-            totalBeauty += beauty(freq);
+            totalBeauty += calculateBeauty(freq);
         }
     }
-    
     return totalBeauty;
 };
