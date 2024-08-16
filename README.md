@@ -72,6 +72,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0724-find-pivot-index](https://github.com/jiaah/Algorithm/tree/master/0724-find-pivot-index) |
 | [1046-max-consecutive-ones-iii](https://github.com/jiaah/Algorithm/tree/master/1046-max-consecutive-ones-iii) |
+| [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/jiaah/Algorithm/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 | [1833-find-the-highest-altitude](https://github.com/jiaah/Algorithm/tree/master/1833-find-the-highest-altitude) |
@@ -112,4 +113,20 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
+## Depth-First Search
+|  |
+| ------- |
+| [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
+## Breadth-First Search
+|  |
+| ------- |
+| [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
+## Union Find
+|  |
+| ------- |
+| [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
+## Matrix
+|  |
+| ------- |
+| [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
 <!---LeetCode Topics End-->
