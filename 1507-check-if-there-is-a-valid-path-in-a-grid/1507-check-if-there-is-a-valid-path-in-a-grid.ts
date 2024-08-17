@@ -35,10 +35,9 @@ function hasValidPath(grid: number[][]): boolean {
             if(visited[nx][ny] == 1) continue;
 
             const nStr = directions[grid[nx][ny]];
-            
+
             // 연결 여부 체크 
-            // e.g. dx가 -1 인 경우 => ndx는 1이여야 한다. dx가 1인 경우 => ndx는 -1이여야 한다.
-            const isConnected = nStr.some(([ndx, ndy]) =>  Math.abs(dx + ndx) == 0);
+            const isConnected = nStr.some(([ndx, ndy]) =>  nx + ndx == x && ny + ndy == y);
             if(isConnected){
                 visited[nx][ny] = 1;
                 dfs(nx, ny);
