@@ -1,11 +1,11 @@
 function hasValidPath(grid: number[][]): boolean {
-    const street = { // Steet 북,동,남,서 정의 
-        '1': [0,1,0,1],
-        '2': [1,0,1,0],
-        '3': [0,0,1,1],
-        '4': [0,1,1,0],
-        '5': [1,0,0,1],
-        '6': [1,1,0,0]
+    const directions = {  
+        1: [[0, -1], [0, 1]],
+        2: [[-1, 0], [1, 0]],
+        3: [[0, -1], [1, 0]],
+        4: [[0, 1], [1, 0]],
+        5: [[0, -1], [-1, 0]],
+        6: [[-1, 0], [0, 1]],
     };
     
     let m = grid.length;
@@ -19,37 +19,29 @@ function hasValidPath(grid: number[][]): boolean {
 
     // 깊이 우선 탐색, 연결된 노드 찾기 -> DFS (o)
     function dfs (x, y){ 
-        // 현재노드와 다음노드가 연결되는지 확인해야 하므로 x, y는 현재노드 기준
-        // 마지막 노드까지 연결된 길을 찾은 경우 -> 종료
-        if(x == grid.length - 1 && y == grid[0].length -1) { 
+        if(x == m - 1 && y == n - 1){ 
             result = true; 
             return; 
         }
+       
+        const cStr = directions[grid[x][y]];
+      
+        // 길이 난 방향의 인접 노드 탐색
+        for(let [dx, dy] of cStr){
+            const nx = x + dx;
+            const ny = y + dy;
 
-        const cStr = street[grid[x][y]];
+            if (nx < 0 || ny < 0 || nx >= m || ny >= n) continue;
+            if(visited[nx][ny] == 1) continue;
 
-        // 현재 노드가 가지고 있는 길 방향에 있는 노드들을 탐색
-        for(let i = 0; i < cStr.length; i++){
-            if(cStr[i] == 0) continue;
-
-            let nx = x, ny = y;
-            if(i == 0) nx--;
-            if(i == 1) ny++;
-            if(i == 2) nx++;
-            if(i == 3) ny--;
+            const nStr = directions[grid[nx][ny]];
             
-            if(!grid[nx]) continue;
-            if(!grid[nx][ny]) continue; // 유효한 범위를 벗어난 경우 -> 무시 
-            if(visited[nx][ny]) continue; // 이미 방문한 노드 -> 무시
-
-            // 연결 여부 체크: 다음 노드의 길이 현재 노드 길의 반대 방향에 있는지 확인
-            const nStr = street[grid[nx][ny]];
-            let nd = null;  
-            if(i < 2) { nd = i + 2 } else { nd = i - 2 };
-
-            if(nStr[nd] == 1) {
-                visited[nx][ny] = 1; // 방문 처리
-                dfs(nx, ny); // 길이 연결되어 있는 노드로 이동 -> 반복
+            // 연결 여부 체크 
+            // e.g. dx가 -1 인 경우 => ndx는 1이여야 한다. dx가 1인 경우 => ndx는 -1이여야 한다.
+            const isConnected = nStr.some(([ndx, ndy]) =>  Math.abs(dx + ndx) == 0);
+            if(isConnected){
+                visited[nx][ny] = 1;
+                dfs(nx, ny);
             }
         }
     };
