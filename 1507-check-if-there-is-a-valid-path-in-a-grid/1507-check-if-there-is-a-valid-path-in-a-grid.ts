@@ -15,13 +15,6 @@ function hasValidPath(grid: number[][]): boolean {
     const queue: [number, number][] = [[0, 0]];
     visited[0][0] = true;
 
-    const directions = [
-        [-1, 0], // up
-        [0, 1],  // right
-        [1, 0],  // down
-        [0, -1]  // left
-    ];
-
     while (queue.length > 0){
         const [x, y] = queue.shift();
 
