@@ -1,27 +1,34 @@
 function hasValidPath(grid: number[][]): boolean {
     const street = { 
-        '1': [0,1,0,1], // [up, right, down, left]
-        '2': [1,0,1,0],
-        '3': [0,0,1,1],
-        '4': [0,1,1,0],
-        '5': [1,0,0,1],
-        '6': [1,1,0,0]
+        1 : [0,1,0,1], // [up, right, down, left]
+        2 : [1,0,1,0],
+        3 : [0,0,1,1],
+        4 : [0,1,1,0],
+        5 : [1,0,0,1],
+        6 : [1,1,0,0]
     };
-    let m = grid.length, n = grid[0].length;
+    const m = grid.length;
+    const n = grid[0].length;
     if(m == 1 && n == 1) return true;
 
     const visited = Array.from({length: m}).map(v => Array(n).fill(0));
-    visited[0][0] = 1; // 방문기록 초기화
-    let result = false;
-    const queue = [[0, 0]];
+    const queue: [number, number][] = [[0, 0]];
+    visited[0][0] = true;
+
+    const directions = [
+        [-1, 0], // up
+        [0, 1],  // right
+        [1, 0],  // down
+        [0, -1]  // left
+    ];
 
     while (queue.length > 0){
         const [x, y] = queue.shift();
 
-        if(x == m - 1 && y == n - 1) { result = true; break; };
+        if(x == m - 1 && y == n - 1) return true;
 
         const cStr = street[grid[x][y]];
-        for(let d = 0; d < cStr.length; d++){
+        for(let d = 0; d < 4; d++){
             if(cStr[d] == 0) continue;
 
             let nx = x, ny = y;
@@ -30,20 +37,17 @@ function hasValidPath(grid: number[][]): boolean {
             if(d == 2) nx++;
             if(d == 3) ny--;
             
-            if(nx < 0 || nx >= m || ny < 0 || ny >= n) continue;
-            if(visited[nx][ny] == 1) continue; 
+            if(nx < 0 || nx >= m || ny < 0 || ny >= n || visited[nx][ny]) continue;
 
             const nStr = street[grid[nx][ny]];
-            let nd = d;
-            if(d < 2) nd += 2;
-            if(d >= 2) nd -= 2;
+            const nd = (d + 2) % 4; // Get the opposite direction
 
             if(nStr[nd] == 1){
-                visited[nx][ny] = 1;
+                visited[nx][ny] = true;
                 queue.push([nx, ny]);
             }
         }
     }
 
-    return result; 
+    return false; 
 };
