@@ -11,13 +11,6 @@ function hasValidPath(grid: number[][]): boolean {
     const n = grid[0].length;
     if(m == 1 && n == 1) return true;
 
-    const directions = [
-        [-1, 0], // up
-        [0, 1],  // right
-        [1, 0],  // down
-        [0, -1]  // left
-    ];
-
     const visited = Array.from({length: m}).map(v => Array(n).fill(0));
     const queue: [number, number][] = [[0, 0]];
     visited[0][0] = true;
@@ -31,8 +24,11 @@ function hasValidPath(grid: number[][]): boolean {
         for(let d = 0; d < 4; d++){
             if(cStr[d] == 0) continue;
 
-            const nx = x + directions[d][0];
-            const ny = y + directions[d][1];
+            let nx = x, ny = y;
+            if(d == 0) nx--;
+            if(d == 1) ny++;
+            if(d == 2) nx++;
+            if(d == 3) ny--;
             
             if(nx < 0 || nx >= m || ny < 0 || ny >= n || visited[nx][ny]) continue;
 
