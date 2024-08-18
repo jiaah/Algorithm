@@ -1,50 +1,49 @@
 function hasValidPath(grid: number[][]): boolean {
-    const directions = {  
-        1: [[0, -1], [0, 1]],
-        2: [[-1, 0], [1, 0]],
-        3: [[0, -1], [1, 0]],
-        4: [[0, 1], [1, 0]],
-        5: [[0, -1], [-1, 0]],
-        6: [[-1, 0], [0, 1]],
+    const street = { 
+        '1': [0,1,0,1], // [up, right, down, left]
+        '2': [1,0,1,0],
+        '3': [0,0,1,1],
+        '4': [0,1,1,0],
+        '5': [1,0,0,1],
+        '6': [1,1,0,0]
     };
-    
-    let m = grid.length;
-    let n = grid[0].length;
-
+    let m = grid.length, n = grid[0].length;
     if(m == 1 && n == 1) return true;
 
     const visited = Array.from({length: m}).map(v => Array(n).fill(0));
     visited[0][0] = 1; // 방문기록 초기화
     let result = false;
+    const queue = [[0, 0]];
 
-    // 깊이 우선 탐색, 연결된 노드 찾기 -> DFS (o)
-    function dfs (x, y){ 
-        if(x == m - 1 && y == n - 1){ 
-            result = true; 
-            return; 
-        }
-       
-        const cStr = directions[grid[x][y]];
-      
-        // 길이 난 방향의 인접 노드 탐색
-        for(let [dx, dy] of cStr){
-            const nx = x + dx;
-            const ny = y + dy;
+    while (queue.length > 0){
+        const [x, y] = queue.shift();
 
-            if (nx < 0 || ny < 0 || nx >= m || ny >= n) continue;
-            if(visited[nx][ny] == 1) continue;
+        if(x == m - 1 && y == n - 1) { result = true; break; };
 
-            const nStr = directions[grid[nx][ny]];
+        const cStr = street[grid[x][y]];
+        for(let d = 0; d < cStr.length; d++){
+            if(cStr[d] == 0) continue;
 
-            // 연결 여부 체크 
-            const isConnected = nStr.some(([ndx, ndy]) =>  nx + ndx == x && ny + ndy == y);
-            if(isConnected){
+            let nx = x, ny = y;
+            if(d == 0) nx--;
+            if(d == 1) ny++;
+            if(d == 2) nx++;
+            if(d == 3) ny--;
+            
+            if(nx < 0 || nx >= m || ny < 0 || ny >= n) continue;
+            if(visited[nx][ny] == 1) continue; 
+
+            const nStr = street[grid[nx][ny]];
+            let nd = d;
+            if(d < 2) nd += 2;
+            if(d >= 2) nd -= 2;
+
+            if(nStr[nd] == 1){
                 visited[nx][ny] = 1;
-                dfs(nx, ny);
+                queue.push([nx, ny]);
             }
         }
-    };
+    }
 
-    dfs(0, 0);
     return result; 
 };
