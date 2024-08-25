@@ -79,6 +79,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Binary Search
 |  |
 | ------- |
+| [0222-count-complete-tree-nodes](https://github.com/jiaah/Algorithm/tree/master/0222-count-complete-tree-nodes) |
 | [1046-max-consecutive-ones-iii](https://github.com/jiaah/Algorithm/tree/master/1046-max-consecutive-ones-iii) |
 ## Sliding Window
 |  |
@@ -129,4 +130,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0222-count-complete-tree-nodes](https://github.com/jiaah/Algorithm/tree/master/0222-count-complete-tree-nodes) |
+## Tree
+|  |
+| ------- |
+| [0222-count-complete-tree-nodes](https://github.com/jiaah/Algorithm/tree/master/0222-count-complete-tree-nodes) |
+## Binary Tree
+|  |
+| ------- |
+| [0222-count-complete-tree-nodes](https://github.com/jiaah/Algorithm/tree/master/0222-count-complete-tree-nodes) |
 <!---LeetCode Topics End-->
