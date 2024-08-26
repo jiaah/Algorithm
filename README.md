@@ -117,6 +117,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Depth-First Search
 |  |
 | ------- |
+| [0145-binary-tree-postorder-traversal](https://github.com/jiaah/Algorithm/tree/master/0145-binary-tree-postorder-traversal) |
 | [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
 ## Breadth-First Search
 |  |
@@ -137,9 +138,15 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Tree
 |  |
 | ------- |
+| [0145-binary-tree-postorder-traversal](https://github.com/jiaah/Algorithm/tree/master/0145-binary-tree-postorder-traversal) |
 | [0222-count-complete-tree-nodes](https://github.com/jiaah/Algorithm/tree/master/0222-count-complete-tree-nodes) |
 ## Binary Tree
 |  |
 | ------- |
+| [0145-binary-tree-postorder-traversal](https://github.com/jiaah/Algorithm/tree/master/0145-binary-tree-postorder-traversal) |
 | [0222-count-complete-tree-nodes](https://github.com/jiaah/Algorithm/tree/master/0222-count-complete-tree-nodes) |
+## Stack
+|  |
+| ------- |
+| [0145-binary-tree-postorder-traversal](https://github.com/jiaah/Algorithm/tree/master/0145-binary-tree-postorder-traversal) |
 <!---LeetCode Topics End-->
