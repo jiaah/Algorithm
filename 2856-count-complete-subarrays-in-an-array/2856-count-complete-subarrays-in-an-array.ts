@@ -1,5 +1,5 @@
 function countCompleteSubarrays(nums: number[]): number {
-    const store = new Set(nums);
+    const size = new Set(nums).size;
     let start = 0, count = 0;
 
     for(let start = 0; start < nums.length; start++){
@@ -9,7 +9,7 @@ function countCompleteSubarrays(nums: number[]): number {
         
             sliced.add(nums[end]);
         
-            if(sliced.size === store.size){
+            if(sliced.size === size){
                 count++;
             }
         }
