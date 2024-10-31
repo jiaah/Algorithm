@@ -70,6 +70,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 |  |
 | ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/jiaah/Algorithm/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0724-find-pivot-index](https://github.com/jiaah/Algorithm/tree/master/0724-find-pivot-index) |
 | [1046-max-consecutive-ones-iii](https://github.com/jiaah/Algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
@@ -159,4 +160,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0145-binary-tree-postorder-traversal](https://github.com/jiaah/Algorithm/tree/master/0145-binary-tree-postorder-traversal) |
+## Two Pointers
+|  |
+| ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/jiaah/Algorithm/tree/master/0026-remove-duplicates-from-sorted-array) |
 <!---LeetCode Topics End-->
