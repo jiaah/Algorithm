@@ -105,6 +105,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/jiaah/Algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0242-valid-anagram](https://github.com/jiaah/Algorithm/tree/master/0242-valid-anagram) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/jiaah/Algorithm/tree/master/1890-sum-of-beauty-of-all-substrings) |
 | [2856-count-complete-subarrays-in-an-array](https://github.com/jiaah/Algorithm/tree/master/2856-count-complete-subarrays-in-an-array) |
@@ -112,6 +113,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/jiaah/Algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0242-valid-anagram](https://github.com/jiaah/Algorithm/tree/master/0242-valid-anagram) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/jiaah/Algorithm/tree/master/1890-sum-of-beauty-of-all-substrings) |
 ## Counting
@@ -121,6 +123,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 |  |
 | ------- |
+| [0242-valid-anagram](https://github.com/jiaah/Algorithm/tree/master/0242-valid-anagram) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 ## Depth-First Search
 |  |
