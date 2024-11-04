@@ -12,9 +12,9 @@ function topKFrequent(words: string[], k: number): string[] {
     // 역순으로 순회하면서 결과를 구성
     const result = []; // S: O(k) ~ O(n)
     let resultCount = 0;
-    for(let i = buckets.length - 1; i >= 0; i--) { // - T: O(n)
+    for(let i = buckets.length - 1; i >= 0; i--) { // T: O(n)
         if(buckets[i].length > 0) {
-            const sorted = buckets[i].sort(); // - T: O(mlogm) ~ O(nlogn)
+            const sorted = buckets[i].sort(); // T: O(mlogm) ~ O(nlogn)
             result.push(...sorted);
             resultCount += sorted.length;
         }
