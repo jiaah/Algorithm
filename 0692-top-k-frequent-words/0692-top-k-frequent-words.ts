@@ -10,15 +10,11 @@ function topKFrequent(words: string[], k: number): string[] {
     }
 
     // 역순으로 순회하면서 결과를 구성
-    // Q) 시간 복잡도가 O(n * mlom)이 아닌 이유? 
-    // 이는 외부 루프가 O(n)이고, 내부에서 각 버킷마다 O(mlogm)의 정렬이 수행되는 상황을 가정한 것. 
-    // 하지만 실제로는 각 단어가 여러 번 중복 정렬되지 않고, 전체적으로 단어 수 n만큼만 정렬이 이루어짐
-    // Q) 최악의 경우 시간복잡도? O(nlogn), 모든 단어가 동일한 빈도로 하나의 버킷에 들어가는 경우.
     const result = []; // S: O(k) ~ O(n)
     let resultCount = 0;
-    for(let i = buckets.length - 1; i >= 0; i--) { // T: O(n)
+    for(let i = buckets.length - 1; i >= 0; i--) { // - T: O(n)
         if(buckets[i].length > 0) {
-            const sorted = buckets[i].sort(); // T: O(mlogm) ~ O(nlogn)
+            const sorted = buckets[i].sort(); // - T: O(mlogm) ~ O(nlogn)
             result.push(...sorted);
             resultCount += sorted.length;
         }
@@ -30,3 +26,10 @@ function topKFrequent(words: string[], k: number): string[] {
 
 // Time: O(nlogn)
 // Space: O(n)
+
+
+// Q) 역순으로 순회하면서 결과를 구성하는 부분의 총 시간 복잡도가 O(n * mlom)이 아닌 이유? 
+// 이는 외부 루프가 O(n)이고, 내부에서 각 버킷마다 O(mlogm)의 정렬이 수행되는 상황을 가정한 것. 
+// 하지만 실제로는 각 단어가 여러 번 중복 정렬되지 않고, 전체적으로 단어 수 n만큼만 정렬이 이루어짐
+
+// Q) 버킷을 정렬하는 부분에서 최악의 시간복잡도는? O(nlogn), 모든 단어가 동일한 빈도로 하나의 버킷에 들어가는 경우.
