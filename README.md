@@ -110,6 +110,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0049-group-anagrams](https://github.com/jiaah/Algorithm/tree/master/0049-group-anagrams) |
 | [0242-valid-anagram](https://github.com/jiaah/Algorithm/tree/master/0242-valid-anagram) |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/jiaah/Algorithm/tree/master/1890-sum-of-beauty-of-all-substrings) |
 | [2856-count-complete-subarrays-in-an-array](https://github.com/jiaah/Algorithm/tree/master/2856-count-complete-subarrays-in-an-array) |
@@ -119,12 +120,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0003-longest-substring-without-repeating-characters](https://github.com/jiaah/Algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0049-group-anagrams](https://github.com/jiaah/Algorithm/tree/master/0049-group-anagrams) |
 | [0242-valid-anagram](https://github.com/jiaah/Algorithm/tree/master/0242-valid-anagram) |
+| [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/jiaah/Algorithm/tree/master/1890-sum-of-beauty-of-all-substrings) |
 ## Counting
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/jiaah/Algorithm/tree/master/1890-sum-of-beauty-of-all-substrings) |
 ## Sorting
 |  |
@@ -132,6 +135,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0049-group-anagrams](https://github.com/jiaah/Algorithm/tree/master/0049-group-anagrams) |
 | [0242-valid-anagram](https://github.com/jiaah/Algorithm/tree/master/0242-valid-anagram) |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 ## Depth-First Search
 |  |
@@ -183,12 +187,18 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
 ## Bucket Sort
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
 ## Quickselect
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
+## Trie
+|  |
+| ------- |
+| [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
 <!---LeetCode Topics End-->
