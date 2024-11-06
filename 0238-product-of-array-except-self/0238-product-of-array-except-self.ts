@@ -1,17 +1,22 @@
 function productExceptSelf(nums: number[]): number[] {
-    const l = nums.length;
-    const leftToRight = new Array(l).fill(1);
-    const rightToLeft = new Array(l).fill(1);
-    const res = new Array(l).fill(1);
+    const leftToRight = new Array(nums.length).fill(1);
+    const rightToLeft = new Array(nums.length).fill(1);
+    const result = new Array(nums.length).fill(1);
 
-    for (let i = 1; i < l; i++) {
-        leftToRight[i] = leftToRight[i - 1] * nums[i - 1];
-        rightToLeft[l - i - 1] = rightToLeft[l - i] * nums[l - i];
+    // 왼쪽부터 누적 곱을 저장
+    for(let i = 0; i < nums.length; i++) {
+        leftToRight[i] = (leftToRight[i - 1] ?? 1) * nums[i];
     }
-
-    for (let i = 0; i < l; i++) {
-        res[i] = leftToRight[i] * rightToLeft[i];
+    // 오른쪽부터 누적 곱을 저장
+    for(let i = nums.length - 1; i >= 0; i--) {
+        rightToLeft[i] = nums[i] * (rightToLeft[i + 1] ?? 1);
     }
-
-    return res;
+    // 각 요소의 값은 leftToRight와 rightToLeft를 곱해 i를 제외한 곱을 저장
+    for(let i = 0; i < nums.length; i++) {
+        result[i] = (leftToRight[i - 1] ?? 1) * (rightToLeft[i + 1] ?? 1);
+    }
+    return result;                           
 };
+
+// TC: O(n)
+// SC: O(n)
