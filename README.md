@@ -72,6 +72,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/jiaah/Algorithm/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0049-group-anagrams](https://github.com/jiaah/Algorithm/tree/master/0049-group-anagrams) |
+| [0238-product-of-array-except-self](https://github.com/jiaah/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [0271-encode-and-decode-strings](https://github.com/jiaah/Algorithm/tree/master/0271-encode-and-decode-strings) |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
 | [0724-find-pivot-index](https://github.com/jiaah/Algorithm/tree/master/0724-find-pivot-index) |
@@ -96,6 +97,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Prefix Sum
 |  |
 | ------- |
+| [0238-product-of-array-except-self](https://github.com/jiaah/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [0724-find-pivot-index](https://github.com/jiaah/Algorithm/tree/master/0724-find-pivot-index) |
 | [1046-max-consecutive-ones-iii](https://github.com/jiaah/Algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1833-find-the-highest-altitude](https://github.com/jiaah/Algorithm/tree/master/1833-find-the-highest-altitude) |
