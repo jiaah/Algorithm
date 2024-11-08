@@ -73,6 +73,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0026-remove-duplicates-from-sorted-array](https://github.com/jiaah/Algorithm/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0036-valid-sudoku](https://github.com/jiaah/Algorithm/tree/master/0036-valid-sudoku) |
 | [0049-group-anagrams](https://github.com/jiaah/Algorithm/tree/master/0049-group-anagrams) |
+| [0128-longest-consecutive-sequence](https://github.com/jiaah/Algorithm/tree/master/0128-longest-consecutive-sequence) |
 | [0238-product-of-array-except-self](https://github.com/jiaah/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [0271-encode-and-decode-strings](https://github.com/jiaah/Algorithm/tree/master/0271-encode-and-decode-strings) |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
@@ -113,6 +114,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0003-longest-substring-without-repeating-characters](https://github.com/jiaah/Algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0036-valid-sudoku](https://github.com/jiaah/Algorithm/tree/master/0036-valid-sudoku) |
 | [0049-group-anagrams](https://github.com/jiaah/Algorithm/tree/master/0049-group-anagrams) |
+| [0128-longest-consecutive-sequence](https://github.com/jiaah/Algorithm/tree/master/0128-longest-consecutive-sequence) |
 | [0242-valid-anagram](https://github.com/jiaah/Algorithm/tree/master/0242-valid-anagram) |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
 | [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
@@ -156,6 +158,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Union Find
 |  |
 | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/jiaah/Algorithm/tree/master/0128-longest-consecutive-sequence) |
 | [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
 ## Matrix
 |  |
