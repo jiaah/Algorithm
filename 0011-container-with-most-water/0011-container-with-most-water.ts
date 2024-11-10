@@ -1,25 +1,24 @@
-
-
 function maxArea(height: number[]): number {
-    let l = 0, r = height.length -1, result = 0;
+    let left = 0;
+    let right = height.length - 1;
+    let max = 0;
 
-    while(l < r) {
-        const leftY = height[l];
-        const rightY = height[r];
-        let amount = 0;
+    // Two pointers: Left and right move towards each other
+    while(left < right) {
+        const lHeight = height[left];
+        const rHeight = height[right];
+        const area = (right - left) * Math.min(lHeight, rHeight);
+        max = Math.max(area, max);
 
-        if(leftY < rightY) {
-            amount = (r - l) * leftY;
-            l++;
+        // Move the pointers inward based on which side is shorter
+        if(lHeight <= rHeight) {
+            left++; 
         } else {
-            amount = (r - l) * rightY;
-            r--
-        };
-
-        if(result < amount){
-            result = amount;
+            right--;
         }
-    };
-    
-    return result;
+    }
+    return max;
 };
+
+// TC: O(n), as we only traverse the array once
+// SC: O(1), using constant extra space
