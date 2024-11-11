@@ -1,7 +1,5 @@
 // liding window technique
 function lengthOfLongestSubstring(s: string): number {
-    if(s.length <= 1) return s.length;
-
     const set = new Set();
     let start = 0, longest = 0;
   
