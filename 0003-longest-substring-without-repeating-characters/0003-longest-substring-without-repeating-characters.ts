@@ -1,21 +1,25 @@
-// use a sliding window technique with a hash map
+// liding window technique
 function lengthOfLongestSubstring(s: string): number {
-    // keep track of the last index of each character encountered.
-    const store = new Map(); 
+    if(s.length <= 1) return s.length;
+
+    const set = new Set();
     let start = 0, longest = 0;
   
     // 'end' extends the window.
     for(let end = 0; end < s.length; end++){
-        const char = s[end];
         
-        if(store.has(char)) {
-            // 'start' moves right when a repeating character is found.
-            start = Math.max(store.get(char) + 1, start);
-        } 
+        if(set.has(s[end])) {
+            while(set.has(s[end])) {             
+                set.delete(s[start]);
+                start++;
+            }
+        }
 
-        store.set(char, end);
-        longest = Math.max(longest, end - start + 1);
-    }
-    
-    return longest;
+        set.add(s[end]);
+        longest = Math.max(longest, set.size);
+    };
+    return Math.max(longest, set.size);
 };
+
+// TC: O(n)
+// SC: O(n)
