@@ -1,4 +1,4 @@
-// liding window technique
+// Sliding window technique
 function lengthOfLongestSubstring(s: string): number {
     const set = new Set();
     let start = 0, longest = 0;
