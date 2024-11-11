@@ -10,7 +10,7 @@ function lengthOfLongestSubstring(s: string): number {
             set.delete(s[start]);
             start++;
         }
-        
+
         set.add(s[end]);
         longest = Math.max(longest, set.size);
     };
@@ -18,4 +18,4 @@ function lengthOfLongestSubstring(s: string): number {
 };
 
 // TC: O(n)
-// SC: O(n)
+// SC: O(m) - total number of unique characters in the string
