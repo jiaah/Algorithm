@@ -18,7 +18,7 @@ function lengthOfLongestSubstring(s: string): number {
         set.add(s[end]);
         longest = Math.max(longest, set.size);
     };
-    return Math.max(longest, set.size);
+    return longest;
 };
 
 // TC: O(n)
