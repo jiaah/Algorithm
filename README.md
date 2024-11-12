@@ -96,6 +96,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/jiaah/Algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0424-longest-repeating-character-replacement](https://github.com/jiaah/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [1046-max-consecutive-ones-iii](https://github.com/jiaah/Algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/jiaah/Algorithm/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [2856-count-complete-subarrays-in-an-array](https://github.com/jiaah/Algorithm/tree/master/2856-count-complete-subarrays-in-an-array) |
@@ -120,6 +121,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0128-longest-consecutive-sequence](https://github.com/jiaah/Algorithm/tree/master/0128-longest-consecutive-sequence) |
 | [0242-valid-anagram](https://github.com/jiaah/Algorithm/tree/master/0242-valid-anagram) |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0424-longest-repeating-character-replacement](https://github.com/jiaah/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/jiaah/Algorithm/tree/master/1890-sum-of-beauty-of-all-substrings) |
@@ -131,6 +133,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0049-group-anagrams](https://github.com/jiaah/Algorithm/tree/master/0049-group-anagrams) |
 | [0242-valid-anagram](https://github.com/jiaah/Algorithm/tree/master/0242-valid-anagram) |
 | [0271-encode-and-decode-strings](https://github.com/jiaah/Algorithm/tree/master/0271-encode-and-decode-strings) |
+| [0424-longest-repeating-character-replacement](https://github.com/jiaah/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/jiaah/Algorithm/tree/master/1890-sum-of-beauty-of-all-substrings) |
