@@ -28,5 +28,5 @@ function checkInclusion(s1: string, s2: string): boolean {
     return result 
 };
 
-// TC: O(m + n) - m: s1의 길이, n: s2의 길이
+// TC: O(m * n) - s2(n)를 순회하면서 s1(m)과 같은 길이의 윈도우에서 빈도수를 검사
 // SC: O(m) - s1Group과 s2Group이 각각 O(m)의 공간을 사용
