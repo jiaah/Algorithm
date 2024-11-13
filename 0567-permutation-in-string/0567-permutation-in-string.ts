@@ -33,9 +33,16 @@ interface Group {
     [key: string]: number;
 }
 
+// s1Group과 s2Group의 빈도수가 일치하는지 확인하는 함수
 function isMatching(s1Group:Group, s2Group:Group):boolean {
-    return Object.keys(s1Group).every(key => s1Group[key] === s2Group[key]);
+    // 각 문자의 차이만 추적하여 O(1)로 최적화
+    for(let key in s1Group) {
+        if(s1Group[key] !== s2Group[key]) {
+            return false;
+        }
+    }
+    return true;
 }
 
-// TC: O(m * n) - s2(n)를 순회하면서 s1(m)과 같은 길이의 윈도우에서 빈도수를 검사
-// SC: O(m) - s1Group과 s2Group이 각각 O(m)의 공간을 사용
+// TC: O(n) - s2(n)를 순회
+// SC: O(m) - s1의 길이에 따라 s1Group과 s2Group이 사용하는 공간
