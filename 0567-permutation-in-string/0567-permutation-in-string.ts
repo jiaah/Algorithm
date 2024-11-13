@@ -28,5 +28,5 @@ function checkInclusion(s1: string, s2: string): boolean {
     return result 
 };
 
-// TC: O(m, n) - m: s1의 길이, n: s2의 길이
+// TC: O(m + n) - m: s1의 길이, n: s2의 길이
 // SC: O(m) - s1의 길이
