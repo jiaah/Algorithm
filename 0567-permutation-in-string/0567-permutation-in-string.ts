@@ -29,4 +29,4 @@ function checkInclusion(s1: string, s2: string): boolean {
 };
 
 // TC: O(m + n) - m: s1의 길이, n: s2의 길이
-// SC: O(m) - s1의 길이
+// SC: O(m) - s1Group과 s2Group이 각각 O(m)의 공간을 사용
