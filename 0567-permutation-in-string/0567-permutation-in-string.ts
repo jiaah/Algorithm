@@ -27,7 +27,6 @@ function checkInclusion(s1: string, s2: string): boolean {
         // 윈도우를 하나씩 오른쪽으로 이동시키면서 s1Count와 s2Count를 비교
         let index = s2.charCodeAt(r) - 97;
         s2Count[index]++;
-        console.log('#',r, s1Count[index], s2Count[index] )
         if (s1Count[index] === s2Count[index]) { // 현재 일치하는 경우
             matches++;
         } else if (s1Count[index] + 1 === s2Count[index]) { // 이전에 일치 상태가 깨진 경우
