@@ -194,6 +194,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0145-binary-tree-postorder-traversal](https://github.com/jiaah/Algorithm/tree/master/0145-binary-tree-postorder-traversal) |
+| [0155-min-stack](https://github.com/jiaah/Algorithm/tree/master/0155-min-stack) |
 ## Two Pointers
 |  |
 | ------- |
@@ -226,6 +227,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Design
 |  |
 | ------- |
+| [0155-min-stack](https://github.com/jiaah/Algorithm/tree/master/0155-min-stack) |
 | [0271-encode-and-decode-strings](https://github.com/jiaah/Algorithm/tree/master/0271-encode-and-decode-strings) |
 ## Greedy
 |  |
