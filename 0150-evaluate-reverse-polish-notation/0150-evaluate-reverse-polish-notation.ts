@@ -8,7 +8,6 @@ const Min_Int = -Math.pow(2, 31);
 const Max_Int = Math.pow(2, 31) - 1;
 
 function evalRPN(tokens: string[]): number {
-
     const stack = [];
 
     for(let value of tokens) {
