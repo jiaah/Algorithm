@@ -4,28 +4,42 @@
 
 // contranit 1 <= tokens.length <= 10^4 -> O(N log N) 내여야함.
 // answer: 32-bit integer 범위 제한
-const Min_Int = -Math.pow(2, 31); 
-const Max_Int = Math.pow(2, 31) - 1;
+
+type OperatorType = '+' | '-' | '*' | '/';
+
+function process(operator: OperatorType, a: number, b: number ): number {
+    switch(operator) {
+        case '+': return b + a;
+        case '-': return b - a;
+        case '*': return b * a;
+        case '/': return Math.trunc(b / a);
+        default: throw new Error("Invalid operator");
+    }
+};
 
 function evalRPN(tokens: string[]): number {
-    const stack = [];
+    const Min_Int = -Math.pow(2, 31); 
+    const Max_Int = Math.pow(2, 31) - 1;
+    const operators: Set<OperatorType> = new Set(['+', '-', '*', '/']);
+    const stack:number[] = [];
 
     for(let value of tokens) {
-        if(Number.isFinite(Number(value))) {
-            stack.push(Number(value));
-        } else {
-            let result;
-            const valueA = Number(stack.pop());
-            const valueB = Number(stack.pop());
- 
-            if(value === '+') result = valueB + valueA;
-            else if(value === '-') result = valueB - valueA;
-            else if(value === '*') result = valueB * valueA;
-            else if(value === '/') result = Math.trunc(valueB / valueA);
+        if(operators.has(value as OperatorType)) {
+            const a = stack.pop();
+            const b = stack.pop();
 
+            if (a === undefined || b === undefined) {
+                throw new Error("Invalid RPN expression");
+            }
+
+            let result = process(value as OperatorType, a, b);
+
+            // 32-bit integer 범위 제한 적용
             if(result < Min_Int) result = Min_Int;
             if(result > Max_Int) result = Max_Int;
-            stack.push(result);
+            stack.push(result); 
+        } else {
+            stack.push(Number(value));
         }
     }
     return stack[0];
