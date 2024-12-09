@@ -7,8 +7,8 @@ function generateParenthesis(n: number): string[] {
             return;
         };
 
-        if(openN < n) backtrack(openN + 1, closeN, stack + '(');
-        if(closeN < openN) backtrack(openN, closeN + 1, stack + ')');
+        if(openN < n) { backtrack(openN + 1, closeN, stack + '(') };
+        if(closeN < openN) { backtrack(openN, closeN + 1, stack + ')') };
     };
 
     backtrack(0, 0, '');
