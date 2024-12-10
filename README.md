@@ -81,6 +81,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0271-encode-and-decode-strings](https://github.com/jiaah/Algorithm/tree/master/0271-encode-and-decode-strings) |
 | [0347-top-k-frequent-elements](https://github.com/jiaah/Algorithm/tree/master/0347-top-k-frequent-elements) |
 | [0724-find-pivot-index](https://github.com/jiaah/Algorithm/tree/master/0724-find-pivot-index) |
+| [0739-daily-temperatures](https://github.com/jiaah/Algorithm/tree/master/0739-daily-temperatures) |
 | [1046-max-consecutive-ones-iii](https://github.com/jiaah/Algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1507-check-if-there-is-a-valid-path-in-a-grid](https://github.com/jiaah/Algorithm/tree/master/1507-check-if-there-is-a-valid-path-in-a-grid) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/jiaah/Algorithm/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
@@ -199,6 +200,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0145-binary-tree-postorder-traversal](https://github.com/jiaah/Algorithm/tree/master/0145-binary-tree-postorder-traversal) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/jiaah/Algorithm/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/jiaah/Algorithm/tree/master/0155-min-stack) |
+| [0739-daily-temperatures](https://github.com/jiaah/Algorithm/tree/master/0739-daily-temperatures) |
 ## Two Pointers
 |  |
 | ------- |
@@ -245,4 +247,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0022-generate-parentheses](https://github.com/jiaah/Algorithm/tree/master/0022-generate-parentheses) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0739-daily-temperatures](https://github.com/jiaah/Algorithm/tree/master/0739-daily-temperatures) |
 <!---LeetCode Topics End-->
