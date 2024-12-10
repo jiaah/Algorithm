@@ -8,7 +8,7 @@ function dailyTemperatures(temperatures: number[]): number[] {
 
         // if the current temperature is higher than the previous temperature
         while(stack.length && stack[stack.length - 1][0] < temp) {
-            const [prevTemp, prevIndex] = stack.pop(); // pop the previous temperature from the stack
+            const [_prevTemp, prevIndex] = stack.pop(); // pop the previous temperature from the stack
             res[prevIndex] = index - prevIndex; // record the difference
         }
                     
