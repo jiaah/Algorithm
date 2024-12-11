@@ -8,10 +8,10 @@ function carFleet(target: number, position: number[], speed: number[]): number {
 
     for(const [x, s] of cars){
         const time = (target - x)/s;
-        const prevTime = fleetTimes[fleetTimes.length - 1];
+        const lastFleetTime = fleetTimes[fleetTimes.length - 1];
 
-        if(prevTime && prevTime > time) {
-            fleetTimes.push(prevTime); // Merge into the current fleet
+        if(lastFleetTime && lastFleetTime > time) {
+            fleetTimes.push(lastFleetTime); // Merge into the current fleet
         } else {
             fleetTimes.push(time); // Start a new fleet
         }
