@@ -1,36 +1,18 @@
 function searchMatrix(matrix: number[][], target: number): boolean {
-    const ROWS = matrix.length - 1;
-    const COLS = matrix[0].length - 1;
-
-    let top = 0;
-    let bot = ROWS;
-    let row = null;
-
-    while(top <= bot) {
-        row = Math.floor((top + bot) / 2);
-
-        if(target > matrix[row][COLS]) { 
-            top = row + 1;
-        } else if(target < matrix[row][0] ){
-            bot = row - 1;
-        } else {
-            break;
-        }
-    }
-
-    if(top > bot) { return false; }
+    const ROWS = matrix.length;
+    const COLS = matrix[0].length;
 
     let left = 0;
-    let right = COLS;
-    let col = null;
+    let right = ROWS * COLS - 1;
 
     while(left <= right) {
-        col = Math.floor((left + right) / 2);
+        const mid = Math.floor((left + right) / 2);
+        const midValue = matrix[Math.floor(mid/COLS)][mid%COLS];
 
-        if(target > matrix[row][col]) {
-            left = col + 1;
-        } else if(target < matrix[row][col]) {
-            right = col - 1;
+        if(target > midValue) {
+            left = mid + 1;
+        } else if(target < midValue) {
+            right = mid - 1;
         } else {
             return true;
         }
