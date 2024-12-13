@@ -16,7 +16,6 @@ function minEatingSpeed(piles: number[], h: number): number {
     while(left <= right) {
         const speed = Math.floor((left + right) / 2);
 
-
         if(canEatAll(speed)){
             minSpeed = speed; // Try for a smaller valid speed
             right = speed - 1;  // Increase speed to meet time constraint
