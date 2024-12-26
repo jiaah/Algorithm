@@ -3,7 +3,7 @@ function findMin(nums: number[]): number {
     let right = nums.length - 1; // end of the search range
 
     while(left < right){
-        const mid = Math.floor((left + right)/2);
+        const mid = left + Math.floor((right - left)/2);
 
         if(nums[mid] > nums[right]) {
             left = mid + 1; // minimum is in the right half
