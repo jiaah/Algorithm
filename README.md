@@ -102,6 +102,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/jiaah/Algorithm/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0222-count-complete-tree-nodes](https://github.com/jiaah/Algorithm/tree/master/0222-count-complete-tree-nodes) |
 | [0907-koko-eating-bananas](https://github.com/jiaah/Algorithm/tree/master/0907-koko-eating-bananas) |
+| [1023-time-based-key-value-store](https://github.com/jiaah/Algorithm/tree/master/1023-time-based-key-value-store) |
 | [1046-max-consecutive-ones-iii](https://github.com/jiaah/Algorithm/tree/master/1046-max-consecutive-ones-iii) |
 ## Sliding Window
 |  |
@@ -137,6 +138,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0424-longest-repeating-character-replacement](https://github.com/jiaah/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [0567-permutation-in-string](https://github.com/jiaah/Algorithm/tree/master/0567-permutation-in-string) |
 | [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
+| [1023-time-based-key-value-store](https://github.com/jiaah/Algorithm/tree/master/1023-time-based-key-value-store) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/jiaah/Algorithm/tree/master/1890-sum-of-beauty-of-all-substrings) |
 | [2856-count-complete-subarrays-in-an-array](https://github.com/jiaah/Algorithm/tree/master/2856-count-complete-subarrays-in-an-array) |
@@ -151,6 +153,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0424-longest-repeating-character-replacement](https://github.com/jiaah/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [0567-permutation-in-string](https://github.com/jiaah/Algorithm/tree/master/0567-permutation-in-string) |
 | [0692-top-k-frequent-words](https://github.com/jiaah/Algorithm/tree/master/0692-top-k-frequent-words) |
+| [1023-time-based-key-value-store](https://github.com/jiaah/Algorithm/tree/master/1023-time-based-key-value-store) |
 | [1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period](https://github.com/jiaah/Algorithm/tree/master/1709-alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) |
 | [1890-sum-of-beauty-of-all-substrings](https://github.com/jiaah/Algorithm/tree/master/1890-sum-of-beauty-of-all-substrings) |
 ## Counting
@@ -247,6 +250,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0155-min-stack](https://github.com/jiaah/Algorithm/tree/master/0155-min-stack) |
 | [0271-encode-and-decode-strings](https://github.com/jiaah/Algorithm/tree/master/0271-encode-and-decode-strings) |
+| [1023-time-based-key-value-store](https://github.com/jiaah/Algorithm/tree/master/1023-time-based-key-value-store) |
 ## Greedy
 |  |
 | ------- |
