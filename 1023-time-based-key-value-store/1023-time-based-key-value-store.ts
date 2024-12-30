@@ -1,5 +1,5 @@
 class TimeMap {
-    private store: Map<string, [string, number][]>;
+    private store: Map<string, {value: string, timestamp: number}[]>;
     constructor() {
         this.store = new Map();    
     }
@@ -8,7 +8,7 @@ class TimeMap {
         if(!this.store.get(key)) {
             this.store.set(key, []);
         }
-        this.store.get(key)!.push([value, timestamp]);
+        this.store.get(key)!.push({value, timestamp});
     }
     // TC: O(1)
     // SC: O(m * n), m: unique keys, n: timestamps
@@ -26,8 +26,8 @@ class TimeMap {
         while(left <= right){
             const mid = left + Math.floor((right - left)/2);
 
-            if(data[mid][1] <= timestamp) {
-                result = data[mid][0]
+            if(data[mid].timestamp <= timestamp) {
+                result = data[mid].value
                 left = mid + 1;
             } else {
                 right = mid - 1;
