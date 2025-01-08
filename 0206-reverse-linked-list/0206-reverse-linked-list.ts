@@ -26,4 +26,5 @@ function reverseList(head: ListNode | null): ListNode | null {
 };
 
 // TC: O(n)
-// SC: O(1)
+// SC: O(1) <- iterable 
+//     O(n) <- reculsive (call stack)
