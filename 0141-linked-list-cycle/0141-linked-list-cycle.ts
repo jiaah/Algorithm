@@ -12,8 +12,8 @@
 
 // Use Floyd's Tortoise and Hare Algorithm
 function hasCycle(head: ListNode | null): boolean {
-    let slow = head;
-    let fast = head;
+    let slow: ListNode | null = head;
+    let fast: ListNode | null = head;
 
     while(fast && fast.next) {
         slow = slow.next;
