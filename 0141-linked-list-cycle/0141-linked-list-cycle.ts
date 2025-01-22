@@ -10,22 +10,22 @@
  * }
  */
 
+// Use Floyd's Tortoise and Hare Algorithm
 function hasCycle(head: ListNode | null): boolean {
-    
-    const visited = new Set();
-    let curr = head;
+    let slow = head;
+    let fast = head;
 
-    while(curr) {
-        if(visited.has(curr)) {
+    while(fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+
+        if(slow === fast) {
             return true;
         }
-
-        visited.add(curr);
-        curr = curr.next;
     }
 
     return false;
 };
 
 // TC: O(n)
-// SC: O(n)
+// SC: O(1)
