@@ -13,43 +13,47 @@
 /**
  Do not return anything, modify head in-place instead.
  */
-
-function findLastNode(node: ListNode): ListNode | null {
-    let prev: ListNode = null;
-    let curr: ListNode = node;
-
-    while(curr && curr.next) {
-        if(curr.next.next === null){
-            prev = curr;
-        } 
-
-        curr = curr.next;
-    }
-
-    if(prev) {
-        const last = prev.next;
-        prev.next = null;
-        return last;
-    }
-
-    return null;
-}
-
 function reorderList(head: ListNode | null): void {
-    let nextNode = head.next;
+    // 1. Find the middle node
+    let slow = head;
+    let fast = head;
 
-    while(nextNode) {
+    while(fast && fast.next) {
+        slow = slow.next; // Move 1 step
+        fast = fast.next.next; // Move 2 steps 
+    };
 
-        let lastNode = findLastNode(nextNode);
-        if(lastNode) {
-            head.next = lastNode;
-            head = head.next;
-        }
+    // 2. Split the list
+    let second = slow.next; // Assign the node after the middle(slow) as the start of the second half
+    slow.next = null; // Disconnect the end of the first half
 
-        head.next = nextNode;
-        head = head.next;
+    // 3. Reverse the second
+    let prev = null;
+    while(second) {
+        let temp = second.next;
+        second.next = prev; // Reverse pointer
 
-        nextNode = nextNode.next;
-        
+        prev = second;
+        second = temp;
     }
+    
+    // 4. Merge the two half
+    let first = head;
+    second = prev; // New head of reversed second half
+
+    while(second){
+        let temp1 = first.next;
+        let temp2 = second.next;
+
+        first.next = second;
+        second.next = temp1;
+        
+        first = temp1;
+        second = temp2;
+    }
+
 };
+
+
+// TC: O(n)
+// SC: O(1)
