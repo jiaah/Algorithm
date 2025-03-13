@@ -11,28 +11,32 @@
  */
 
 function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
-    let N = 0;
+    let length = 0;
     let cur = head;
+
+    // Calculate the length of the linked list
     while(cur) {
-        N++;
+        length++;
         cur = cur.next;
     }
 
-    N = N - n;
-    if(N === 0) {
+    const targetPrevIndex = length - n;
+    if(targetPrevIndex === 0) {
         return head.next;
     }
-
+    
     cur = head;
-    let temp = null;
-    for(let i = 1; i <= N; i++){
-        if(i === N) {
-            temp = cur.next;
-            cur.next = temp.next;
-            temp.next = null;
-        }
+
+    // Traverse to the node before the target node
+    for(let i = 1; i < targetPrevIndex; i++){
         cur = cur.next;
     }
+
+    // Remove the target node
+    const targetNode = cur.next;
+    cur.next = targetNode.next;
+    targetNode.next = null;
 
     return head;
 };
+
