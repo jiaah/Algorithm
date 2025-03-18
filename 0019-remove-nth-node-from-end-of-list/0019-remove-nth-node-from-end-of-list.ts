@@ -11,32 +11,26 @@
  */
 
 function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
-    let length = 0;
-    let cur = head;
+    const dummy = new ListNode(0, head); // 더미 노드를 생성하여 head 앞에 추가 (삭제 처리를 쉽게 하기 위해)
 
-    // Calculate the length of the linked list
-    while(cur) {
-        length++;
-        cur = cur.next;
+    let left = dummy;
+    let right = head;
+
+    // 오른쪽 포인터를 n+1 칸 앞으로 이동 (left와 n 간격 유지)
+    for(let i = 1; i <= n; i++) {
+        right = right.next;
+    };
+
+    // right가 리스트 끝(null)에 도달할 때까지 두 포인터를 함께 이동
+    while(right !== null) {
+        left = left.next;
+        right = right.next;
     }
 
-    const targetPrevIndex = length - n;
-    if(targetPrevIndex === 0) {
-        return head.next;
-    }
-    
-    cur = head;
-
-    // Traverse to the node before the target node
-    for(let i = 1; i < targetPrevIndex; i++){
-        cur = cur.next;
-    }
-
-    // Remove the target node
-    const targetNode = cur.next;
-    cur.next = targetNode.next;
-    targetNode.next = null;
-
-    return head;
+    // left는 삭제할 노드의 직전 노드를 가리키게 되므로, 연결을 변경하여 노드를 제거
+    left.next = left.next.next;
+    return dummy.next; // 변경된 리스트의 head 반환
 };
 
+// TC: O(n)
+// SC: O(1)
