@@ -3,10 +3,10 @@
 // 최적 방식: 문자열 정제 후 양쪽 비교(Two Pointer)
 
 function isPalindrome(s: string): boolean {
-    const filtered = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    const filtered:string = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
     
-    let left = 0;
-    let right = filtered.length - 1;
+    let left:number = 0;
+    let right:number = filtered.length - 1;
 
     while(left < right) { // 중앙 문자는 무조건 동일하므로, left === right일 때 비교 의미 없음
         if(filtered[left] !== filtered[right]) {
