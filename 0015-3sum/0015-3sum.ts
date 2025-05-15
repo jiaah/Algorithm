@@ -13,7 +13,8 @@ function threeSum(nums: number[]): number[][] {
     const sorted: number[] = nums.sort((a, b) => a - b);
     const triplets: number[][] = [];
 
-    for(let i = 0; i <= sorted.length - 3; i++) {
+    for(let i = 0; i <= sorted.length; i++) {
+        if(sorted[i] > 0) break;
         // i 중복 건너뛰기
         if(i >= 1 && sorted[i] === sorted[i - 1]) continue;
 
