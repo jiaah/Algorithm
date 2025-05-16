@@ -9,13 +9,14 @@ function maxArea(height: number[]): number {
    let l = 0, r = height.length - 1, max = 0;
 
    while(l < r) {
-        const isleftShorter = height[l] < height[r] 
-        const area = (r - l) * (isleftShorter ? height[l] : height[r]);
+        const area = (r - l) * Math.min(height[l], height[r]);
+        max = Math.max(max, area);
 
-        if(area > max) {
-            max = area;
+        if(height[l] <= height[r]) {
+            l++;
+        } else {
+            r--;
         }
-        isleftShorter ? l++ : r--;
    }
    return max;
 };
