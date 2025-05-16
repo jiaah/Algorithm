@@ -1,24 +1,24 @@
+/**
+ * 1. n의 범위: 2 ≤ n ≤ 100,000
+ *    - O(n log n) ~ O(n)
+ * 2. height[i]의 범위: 0 ≤ height[i] ≤ 10,000
+ *    - 충분히 작은 수로 정밀도 이슈 x
+ */
+
 function maxArea(height: number[]): number {
-    let left = 0;
-    let right = height.length - 1;
-    let max = 0;
+   let l = 0, r = height.length - 1, max = 0;
 
-    // Two pointers: Left and right move towards each other
-    while(left < right) {
-        const lHeight = height[left];
-        const rHeight = height[right];
-        const area = (right - left) * Math.min(lHeight, rHeight);
-        max = Math.max(area, max);
+   while(l < r) {
+        const isleftShorter = height[l] < height[r] 
+        const area = (r - l) * (isleftShorter ? height[l] : height[r]);
 
-        // Move the pointers inward based on which side is shorter
-        if(lHeight <= rHeight) {
-            left++; 
-        } else {
-            right--;
+        if(area > max) {
+            max = area;
         }
-    }
-    return max;
+        isleftShorter ? l++ : r--;
+   }
+   return max;
 };
 
-// TC: O(n), as we only traverse the array once
-// SC: O(1), using constant extra space
+// TC: O(n)
+// SC: O(1)
