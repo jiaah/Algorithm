@@ -1,16 +1,15 @@
+// 중복 위치 기억 후 start를 건너뛰기
 function lengthOfLongestSubstring(s: string): number {
     const store = new Set(); 
-    let start = 0, end = 0, longest = 0;
+    let l = 0, longest = 0;
 
-    while(end < s.length) {
-        if(!store.has(s[end])) {
-            store.add(s[end]);
-            end++;
-        } else {
-            store.delete(s[start]);
-            start++;
+    for(let r = 0; r < s.length; r++) {
+        while(store.has(s[r])) {
+            store.delete(s[l]);
+            l++;
         }
-        longest = Math.max(longest, store.size);
+        store.add(s[r]);
+        longest = Math.max(longest, r - l + 1);
     }
     return longest;
 };
