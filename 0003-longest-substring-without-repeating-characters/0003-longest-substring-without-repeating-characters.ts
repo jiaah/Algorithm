@@ -14,5 +14,5 @@ function lengthOfLongestSubstring(s: string): number {
     return longest;
 };
 
-// TC: O(n)
+// TC: O(n): 각 포인터가 따로 최대 n번씩 움직이므로 O(n + n) = O(n)
 // SC: O(n)
