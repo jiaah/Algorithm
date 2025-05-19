@@ -8,12 +8,12 @@ function lengthOfLongestSubstring(s: string): number {
             // -> 왼쪽 포인터를 "더 오른쪽으로"만 이동
             l = Math.max(l, store.get(s[r]) + 1); 
         }
-        
+
         longest = Math.max(longest, r - l + 1);
         store.set(s[r], r);
     }
     return longest;
 };
 
-// TC: O(n^2)
+// TC: O(n)
 // SC: O(m)
