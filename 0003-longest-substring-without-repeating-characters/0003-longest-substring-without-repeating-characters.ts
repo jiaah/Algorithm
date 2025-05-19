@@ -1,18 +1,22 @@
-// 중복 위치 기억 후 start를 건너뛰기
 function lengthOfLongestSubstring(s: string): number {
-    const store = new Set(); 
+    const store = new Map(); // 현재 윈도우 범위 유지
     let l = 0, longest = 0;
 
     for(let r = 0; r < s.length; r++) {
-        while(store.has(s[r])) {
-            store.delete(s[l]);
-            l++;
+        
+        if(store.has(s[r])) {
+            l = store.get(s[r]) + 1; // 중복된 문자 다음으로 건너뛰기
+
+            for(let key of store.keys()) { // 중복된 문자 이전까지 store에서 전부 제거
+                store.delete(key);
+                if(key === s[r]) break;
+            }
         }
-        store.add(s[r]);
         longest = Math.max(longest, r - l + 1);
+        store.set(s[r], r);
     }
     return longest;
 };
 
-// TC: O(n): 각 포인터가 따로 최대 n번씩 움직이므로 O(n + n) = O(n)
-// SC: O(n)
+// TC: O(n^2)
+// SC: O(m)
