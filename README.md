@@ -150,6 +150,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/jiaah/Algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0020-valid-parentheses](https://github.com/jiaah/Algorithm/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/jiaah/Algorithm/tree/master/0022-generate-parentheses) |
 | [0049-group-anagrams](https://github.com/jiaah/Algorithm/tree/master/0049-group-anagrams) |
 | [0125-valid-palindrome](https://github.com/jiaah/Algorithm/tree/master/0125-valid-palindrome) |
@@ -217,6 +218,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Stack
 |  |
 | ------- |
+| [0020-valid-parentheses](https://github.com/jiaah/Algorithm/tree/master/0020-valid-parentheses) |
 | [0143-reorder-list](https://github.com/jiaah/Algorithm/tree/master/0143-reorder-list) |
 | [0145-binary-tree-postorder-traversal](https://github.com/jiaah/Algorithm/tree/master/0145-binary-tree-postorder-traversal) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/jiaah/Algorithm/tree/master/0150-evaluate-reverse-polish-notation) |
