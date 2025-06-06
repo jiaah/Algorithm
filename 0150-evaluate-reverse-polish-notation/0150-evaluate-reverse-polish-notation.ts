@@ -1,49 +1,38 @@
-// 후위 표기법
-// 1. 피연산자는 스택에 push.
-// 2. 연산자가 나오면 스택에서 필요한 개수만큼 피연산자를 pop하고, 계산한 결과를 다시 push.
+/*
+ * 1. Reverse Polish Notation 계산 -> Stack 자료구조 사용
+ * 2. 입력 유효성 보장 → 예외 처리(잘못된 식, 0으로 나누기 등) 불필요
+ * 3. 정수 범위 내 계산 보장 → 오버플로우 처리 불필요
+ * 4. 나눗셈 연산 시 결과는 0 방향으로 버림(truncation toward zero)
+ * 5. 입력 크기 최대 10^4 → 시간복잡도 O(n)으로 충분히 처리 가능
+ */
 
-// contranit 1 <= tokens.length <= 10^4 -> O(N log N) 내여야함.
-// answer: 32-bit integer 범위 제한
-
-type OperatorType = '+' | '-' | '*' | '/';
-
-function process(operator: OperatorType, a: number, b: number ): number {
-    switch(operator) {
-        case '+': return b + a;
-        case '-': return b - a;
-        case '*': return b * a;
-        case '/': return Math.trunc(b / a);
-        default: throw new Error("Invalid operator");
+function operate(a:number, b:number, op:string):number {
+    console.log(op)
+    switch(op) {
+        case '+': return a + b;
+        case '-': return a - b;
+        case '*': return a * b;
+        case '/': return Math.trunc(a / b);
+        default: throw new Error('Invalid operator')
     }
-};
+}
 
-function evalRPN(tokens: string[]): number {
-    const Min_Int = -Math.pow(2, 31); 
-    const Max_Int = Math.pow(2, 31) - 1;
-    const operators: Set<OperatorType> = new Set(['+', '-', '*', '/']);
-    const stack:number[] = [];
+// 숫자는 스택에 push, 연산자는 스택에서 숫자 두 개를 pop해서 계산 후 다시 push
+function evalRPN(tokens: string[]): number {    
+    const stack = [];
 
-    for(let value of tokens) {
-        if(operators.has(value as OperatorType)) {
-            const a = stack.pop();
-            const b = stack.pop();
-
-            if (a === undefined || b === undefined) {
-                throw new Error("Invalid RPN expression");
-            }
-
-            let result = process(value as OperatorType, a, b);
-
-            // 32-bit integer 범위 제한 적용
-            if(result < Min_Int) result = Min_Int;
-            if(result > Max_Int) result = Max_Int;
-            stack.push(result); 
+    for(const token of tokens) {
+        if(isNaN(Number(token))) {
+            const right = stack.pop();
+            const left = stack.pop();
+            const result = operate(left, right, token);
+            stack.push(result);
+            
         } else {
-            stack.push(Number(value));
+            stack.push(Number(token));
+            
         }
     }
+
     return stack[0];
 };
-
-// TC: O(n)
-// SC: O(n)
