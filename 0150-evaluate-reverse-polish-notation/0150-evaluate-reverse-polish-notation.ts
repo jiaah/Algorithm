@@ -6,8 +6,11 @@
  * 5. 입력 크기 최대 10^4 → 시간복잡도 O(n)으로 충분히 처리 가능
  */
 
-function operate(a:number, b:number, op:string):number {
-    console.log(op)
+type OpToken = "*" | "/" | "-" | "+";
+
+const operators:OpToken[] = ['+', '-', '*', '/'];
+
+function operate(a:number, b:number, op:OpToken):number {
     switch(op) {
         case '+': return a + b;
         case '-': return a - b;
@@ -22,15 +25,13 @@ function evalRPN(tokens: string[]): number {
     const stack = [];
 
     for(const token of tokens) {
-        const num = Number(token);
-
-        if(!isNaN(num)) {
-            stack.push(num);
-        } else {
+        if(operators.includes(token as OpToken)) {
             const right = stack.pop();
             const left = stack.pop();
-            const result = operate(left, right, token);
+            const result = operate(left, right, token as OpToken);
             stack.push(result);
+        } else {
+            stack.push(Number(token));
         }
     }
 
