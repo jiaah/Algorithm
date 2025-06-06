@@ -7,29 +7,25 @@
  */
 
 type OpToken = "*" | "/" | "-" | "+";
+type OpFunc = (a:number, b:number) => number 
 
-const operators:OpToken[] = ['+', '-', '*', '/'];
-
-function operate(a:number, b:number, op:OpToken):number {
-    switch(op) {
-        case '+': return a + b;
-        case '-': return a - b;
-        case '*': return a * b;
-        case '/': return Math.trunc(a / b);
-        default: throw new Error('Invalid operator')
-    }
-}
+const ops = new Map<OpToken, OpFunc>([
+    ['*', (a, b) => a * b],
+    ['/', (a, b) => Math.trunc(a / b)],
+    ['+', (a, b) => a + b],
+    ['-', (a, b) => a - b]
+]);
 
 // 숫자는 스택에 push, 연산자는 스택에서 숫자 두 개를 pop해서 계산 후 다시 push
 function evalRPN(tokens: string[]): number {    
     const stack = [];
 
     for(const token of tokens) {
-        if(operators.includes(token as OpToken)) {
+        if(ops.has(token as OpToken)) {
             const right = stack.pop();
             const left = stack.pop();
-            const result = operate(left, right, token as OpToken);
-            stack.push(result);
+            const op = ops.get(token as OpToken);
+            stack.push(op(left, right));
         } else {
             stack.push(Number(token));
         }
