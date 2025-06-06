@@ -22,17 +22,20 @@ function evalRPN(tokens: string[]): number {
     const stack = [];
 
     for(const token of tokens) {
-        if(isNaN(Number(token))) {
+        const num = Number(token);
+
+        if(!isNaN(num)) {
+            stack.push(num);
+        } else {
             const right = stack.pop();
             const left = stack.pop();
             const result = operate(left, right, token);
             stack.push(result);
-            
-        } else {
-            stack.push(Number(token));
-            
         }
     }
 
     return stack[0];
 };
+
+// TC: O(n)
+// SC: O(n)
