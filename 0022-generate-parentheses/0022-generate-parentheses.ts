@@ -6,13 +6,12 @@ function generateParenthesis(n: number): string[] {
             combinations.push(current);
             return;
         }
-
-        if(openCount > n || closeCount > n || openCount < closeCount) {
-            return;
+        if(openCount < n) {
+            backTrack(openCount + 1, closeCount, current + '(');    
         }
-
-        backTrack(openCount + 1, closeCount, current + '(');
-        backTrack(openCount, closeCount + 1, current + ')');
+        if(openCount > closeCount) {
+            backTrack(openCount, closeCount + 1, current + ')');
+        }
     }
 
     backTrack(0, 0, '');
