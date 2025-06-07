@@ -1,20 +1,20 @@
 function generateParenthesis(n: number): string[] {
-    const res:string[] = [];
-    
-    const backtrack = (openN, closeN, stack) => {
-        if(openN === closeN && openN === n) {
-            res.push(stack);
+    const combinations: string[] = [];
+
+    function backTrack(openCount: number, closeCount: number, current: string) {
+        if(openCount === n && closeCount ===  n) {
+            combinations.push(current);
             return;
-        };
+        }
 
-        if(openN < n) { backtrack(openN + 1, closeN, stack + '(') };
-        if(closeN < openN) { backtrack(openN, closeN + 1, stack + ')') };
-    };
+        if(openCount > n || closeCount > n || openCount < closeCount) {
+            return;
+        }
 
-    backtrack(0, 0, '');
-    return res;
+        backTrack(openCount + 1, closeCount, current + '(');
+        backTrack(openCount, closeCount + 1, current + ')');
+    }
+
+    backTrack(0, 0, '');
+    return combinations;
 };
-
-// Cn = n^4/sqrt(n), The number of valid parenthesis combinations (Catalan number)
-// TC: O(Cn), Iterates for each valid parenthesis combination
-// SC: O(n * Cn), Includes both result storage and recursion stack
