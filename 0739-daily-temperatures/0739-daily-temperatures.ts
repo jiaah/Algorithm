@@ -1,21 +1,20 @@
-// Monotonic Decreasing Stack
 function dailyTemperatures(temperatures: number[]): number[] {
-    const res: number[] = new Array(temperatures.length).fill(0);
-    const stack: [temperature: number, index: number][] = [];
+    const result:number[] = Array.from({length: temperatures.length }, () => 0);
+    let stack:[number, number][] = []; // 온도, index 저장
 
-    for(let index = 0; index < temperatures.length; index++) {
-        const temp = temperatures[index];
+    for(let i = 0; i < temperatures.length; i++) {
 
-        // if the current temperature is higher than the previous temperature
-        while(stack.length && stack[stack.length - 1][0] < temp) {
-            const [_prevTemp, prevIndex] = stack.pop(); // pop the previous temperature from the stack
-            res[prevIndex] = index - prevIndex; // record the difference
-        }
-                    
-        stack.push([temp, index]);  // Add the current temperature and its index to the stack 
+        // 현재 온도보다 낮은 온도가 있을때까지, 
+        // stack에서 pop하여 결과 배열에 날짜 차이를 기록 
+        while(stack.length && temperatures[i] > stack[stack.length - 1][0]) {
+            const [, prevIndex] = stack.pop();
+            result[prevIndex] = i - prevIndex;
+        } 
+        stack.push([temperatures[i], i]);
     }
-    return res;
+
+    return result;
 };
 
-// TC: O(n), while문이 여러 번 실행될 수 있지만, 각 요소가 pop되는 횟수가 한 번뿐이므로 O(n²)가 아닌 O(n)
+// TC: O(n)— for 루프는 n번 반복되고, while 루프 내 pop 연산도 각 원소 당 최대 한 번씩 발생해 총합은 O(n). 따라서 O(n) + O(n) = O(n)
 // SC: O(n)
