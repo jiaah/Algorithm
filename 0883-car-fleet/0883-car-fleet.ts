@@ -1,24 +1,24 @@
-type Car = [time: number, speed: number];
-
-function carFleet(target: number, position: number[], speed: number[]): number {
-    const cars:Car[] = position
-        .map((x, index):Car => [x, speed[index]])
-        .sort((a, b) => b[0] - a[0]);
-
-    let fleets = 0;
-    let reachingTime = 0;
-
-    for(const [x, s] of cars){
-        const time = (target - x)/s;
-
-        if(time > reachingTime) {
-            fleets++; // Start a new fleet
-            reachingTime = time; 
-        } 
-    }
-
-    return fleets;
+function getTimeToTarget (target: number, position: number, speed: number): number { 
+    return (target - position) / speed 
 };
 
-// TC: O(n)
-// SC: O(1)
+function carFleet(target: number, position: number[], speed: number[]): number {
+    const cars = position.map((pos, index) => [pos, speed[index]]);
+    cars.sort((a, b) => b[0] - a[0]); // sort by position descending
+
+    const fleet: number[] = [];
+
+    for(const [pos, spd] of cars) {
+        const timeToTarget = getTimeToTarget(target, pos, spd);
+        const lastFleetTime = fleet[fleet.length - 1];
+
+        if(!fleet.length || timeToTarget > lastFleetTime) { 
+            fleet.push(timeToTarget);
+        }
+    }
+    
+    return fleet.length;
+};
+
+// TC: O(n log n)
+// SC: O(n)
